@@ -1,0 +1,1876 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2025 11:53:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ERICKDESKTOP"
+  DTS:CreatorName="ERICKDESKTOP\Erick_laptop"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{DE5FF9A2-49FA-4499-B240-97F6332AE770}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="DFT_Roaming_Consolidado"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{EF11C3EE-0D08-4237-A3AE-26071F27E635}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ADO_CR]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{BEDC0240-3C0D-48E1-BF5F-B836A916DE3B}"
+      DTS:ObjectName="ADO_CR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=ERICKDESKTOP\SQLSERVER1;User ID=sa;Initial Catalog=db_roaming_costarica;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-DFT_Roaming_Consolidado-{BEDC0240-3C0D-48E1-BF5F-B836A916DE3B}ERICKDESKTOP\SQLSERVER1.db_roaming_costarica.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwyWjj9JQHEq6aBfTl84jmwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADJc7iGD3lmc14oFvoIDOvtRvErZjgwBTfiUJwL+Ama8gAAAAAOgAAAAAIAACAAAABaIp7rmuUKC3JEthVw9cGAgUS/g2ljflquwxLxtzjJeyAAAAC94ffeVlKf8Bv2TD2m7thlSZTiTcf7y4Ujmk51RdcyrEAAAAC3MXFf5xyOFkP+1zygX9B0872qh3WNbugKZkfbslyfvJsCqR9fqqB7S74DQxeczxGtKfNSS/+FgKRmdr/INTMG</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ADO_GT]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{39973036-8F94-4085-B399-3789AE5249F2}"
+      DTS:ObjectName="ADO_GT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=ERICKDESKTOP\SQLSERVER1;User ID=sa;Initial Catalog=db_roaming_guatemala;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-DFT_Roaming_Consolidado-{39973036-8F94-4085-B399-3789AE5249F2}ERICKDESKTOP\SQLSERVER1.db_roaming_guatemala.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwyWjj9JQHEq6aBfTl84jmwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVsll+/a/NI1BIVUnZ3ajbr0u/8Sh7NW01eK7PlwEOEAAAAAAOgAAAAAIAACAAAABtXDi4kKpwxg0/ARxxgwk9IefMPpiZuHUS3CIv4vXPuCAAAAByncAlnPuNl5PIglVBAto/wIw5gmb3aSS932C20QSZBEAAAAADpb4SE+saNkGNcuj6qMMkWFxq8SYuqMm+4O+mcuXTS934yA5fDThCVPZmbP0Df2ODeeFSOOLy9XvrkHHFxSzK</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ADO_HN]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D251BF6E-E60C-4A91-B80E-B071B66ADC3E}"
+      DTS:ObjectName="ADO_HN">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=ERICKDESKTOP\SQLSERVER1;User ID=sa;Initial Catalog=db_roaming_honduras;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-DFT_Roaming_Consolidado-{D251BF6E-E60C-4A91-B80E-B071B66ADC3E}ERICKDESKTOP\SQLSERVER1.db_roaming_honduras.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwyWjj9JQHEq6aBfTl84jmwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAATCHYu6iz9nc4hLLynUjqAkC07roTTLGcwmQRfewe1GAAAAAAOgAAAAAIAACAAAADamygiSEeRbvzNtAbMURuccmMDn4Sg7ulQP0st9xkJgSAAAACPRjfag09thk0B3Y9pQeNCjketB/GyY2jeN8iwBNUzo0AAAABezagIa2kqGoPQPHvF0IxFjjv3M8yuDCvRNr7Y8hw7475rv6W2952FCR7kdKoCh039HfPm0/PYeOgQ8r/dWIVC</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLE_XLS_Pais]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AD28D1AB-AE5F-41F8-8CC1-A85BF3079252}"
+      DTS:ObjectName="OLE_XLS_Pais">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=C:\Desafio_DW_ETL\salidas\Consolidado_por_Pais.xlsx;Provider=Microsoft.ACE.OLEDB.16.0;Mode=3;Extended Properties=&quot;Excel 12.0 Xml;HDR=YES;IMEX=0;READONLY=FALSE;&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLE_XLS_Tipo]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{60065A42-ED77-4BEC-8494-41287D8CBCA1}"
+      DTS:ObjectName="OLE_XLS_Tipo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=C:\Desafio_DW_ETL\salidas\Consolidado_por_TipoCliente.xlsx;Provider=Microsoft.ACE.OLEDB.16.0;Mode=3;Extended Properties=&quot;Excel 12.0 Xml;HDR=YES;IMEX=0;READONLY=FALSE;&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Roaming_Consolidado"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{495A023B-CE15-4943-9E8B-D7EFADCB97A7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Roaming_Consolidado"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="ADO_SRC_CR"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+  'Costa Rica' AS pais,
+  c.idcliente,
+  tc.nombre_tipo AS tipo_cliente,
+  f.monto_facturacion
+FROM dbo.cliente c
+JOIN dbo.facturacion f    ON f.idcliente = c.idcliente
+JOIN dbo.tipo_clientes tc ON tc.idtipocliente = c.idtipocliente;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ADO_CR]"
+                  connectionManagerRefId="Package.ConnectionManagers[ADO_CR]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      length="10"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      name="pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      dataType="wstr"
+                      length="10"
+                      name="pais" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      name="tipo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      name="pais" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="ADO_SRC_GT"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+  'Guatemala' AS pais,
+  c.idcliente,
+  tc.nombre_tipo AS tipo_cliente,
+  f.monto_facturacion
+FROM dbo.cliente c
+JOIN dbo.facturacion f    ON f.idcliente = c.idcliente
+JOIN dbo.tipo_clientes tc ON tc.idtipocliente = c.idtipocliente;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ADO_GT]"
+                  connectionManagerRefId="Package.ConnectionManagers[ADO_GT]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      length="9"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      name="pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      dataType="wstr"
+                      length="9"
+                      name="pais" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      name="tipo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      name="pais" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="ADO_SRC_HN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+  'Honduras' AS pais,
+  c.idcliente,
+  tc.nombre_tipo AS tipo_cliente,
+  f.monto_facturacion
+FROM dbo.cliente c
+JOIN dbo.facturacion f    ON f.idcliente = c.idcliente
+JOIN dbo.tipo_clientes tc ON tc.idtipocliente = c.idtipocliente;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ADO_HN]"
+                  connectionManagerRefId="Package.ConnectionManagers[ADO_HN]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      length="8"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[pais]"
+                      name="pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[pais]"
+                      dataType="wstr"
+                      length="8"
+                      name="pais" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[idcliente]"
+                      dataType="i4"
+                      name="idcliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      name="tipo_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].ExternalColumns[monto_facturacion]"
+                      dataType="numeric"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[pais]"
+                      name="pais" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[tipo_cliente]"
+                      name="tipo_cliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST_Pais"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Resumen$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLE_XLS_Pais]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLE_XLS_Pais]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].Columns[pais]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="pais"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[pais]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].Columns[numero_ventas]"
+                      cachedDataType="ui8"
+                      cachedName="numero_ventas"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Numero_Ventas]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[numero_ventas]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].Columns[monto_total]"
+                      cachedDataType="numeric"
+                      cachedName="monto_total"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Monto_Total]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[monto_total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      dataType="wstr"
+                      length="255"
+                      name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Numero_Ventas]"
+                      dataType="wstr"
+                      length="255"
+                      name="Numero_Ventas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input].ExternalColumns[Monto_Total]"
+                      dataType="wstr"
+                      length="255"
+                      name="Monto_Total" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST_Tipo"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Resumen$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLE_XLS_Tipo]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLE_XLS_Tipo]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].Columns[tipo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tipo_cliente"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_Cliente]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[tipo_cliente]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].Columns[numero_ventas]"
+                      cachedDataType="ui8"
+                      cachedName="numero_ventas"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Numero_Ventas]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[numero_ventas]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].Columns[monto_total]"
+                      cachedDataType="numeric"
+                      cachedName="monto_total"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Monto_Total]"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[monto_total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tipo_Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Numero_Ventas]"
+                      dataType="wstr"
+                      length="255"
+                      name="Numero_Ventas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input].ExternalColumns[Monto_Total]"
+                      dataType="wstr"
+                      length="255"
+                      name="Monto_Total" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="TRF_Agg_Pais"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Inputs[Aggregate Input 1].Columns[pais]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="pais"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Inputs[Aggregate Input 1].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Inputs[Aggregate Input 1].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[pais]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[pais]"
+                      name="pais">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[numero_ventas]"
+                      dataType="ui8"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[numero_ventas]"
+                      name="numero_ventas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[monto_total]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1].Columns[monto_total]"
+                      name="monto_total"
+                      precision="10"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="TRF_Agg_Tipo"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Inputs[Aggregate Input 1].Columns[tipo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tipo_cliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Inputs[Aggregate Input 1].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]" />
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Inputs[Aggregate Input 1].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[tipo_cliente]"
+                      name="tipo_cliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[numero_ventas]"
+                      dataType="ui8"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[numero_ventas]"
+                      name="numero_ventas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[monto_total]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1].Columns[monto_total]"
+                      name="monto_total"
+                      precision="10"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\TRF_Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="TRF_Multicast">
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="TRF_UnionAll"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1].Columns[pais]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="pais"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[pais]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1].Columns[tipo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tipo_cliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2].Columns[pais]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="pais"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[pais]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2].Columns[tipo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tipo_cliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4].Columns[pais]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="pais"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[pais]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4].Columns[idcliente]"
+                      cachedDataType="i4"
+                      cachedName="idcliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[idcliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4].Columns[tipo_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="tipo_cliente"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[tipo_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4].Columns[monto_facturacion]"
+                      cachedDataType="numeric"
+                      cachedName="monto_facturacion"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET].Columns[monto_facturacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[pais]"
+                      name="pais" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[idcliente]"
+                      name="idcliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[tipo_cliente]"
+                      name="tipo_cliente" />
+                    <outputColumn
+                      refId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1].Columns[monto_facturacion]"
+                      name="monto_facturacion"
+                      precision="10"
+                      scale="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Aggregate Output 1]"
+              endId="Package\DFT_Roaming_Consolidado\OLE_DST_Pais.Inputs[OLE DB Destination Input]"
+              name="Aggregate Output 1"
+              startId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Aggregate Output 11]"
+              endId="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo.Inputs[OLE DB Destination Input]"
+              name="Aggregate Output 1"
+              startId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Multicast Output 1]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais.Inputs[Aggregate Input 1]"
+              name="Multicast Output 1"
+              startId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Multicast Output 2]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\DFT_Roaming_Consolidado\ADO_SRC_CR.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET1]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 2]"
+              name="Salida de origen de ADO NET"
+              startId="Package\DFT_Roaming_Consolidado\ADO_SRC_GT.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET2]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Inputs[Union All Input 4]"
+              name="Salida de origen de ADO NET"
+              startId="Package\DFT_Roaming_Consolidado\ADO_SRC_HN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\DFT_Roaming_Consolidado.Paths[Union All Output 1]"
+              endId="Package\DFT_Roaming_Consolidado\TRF_Multicast.Inputs[Multicast Input 1]"
+              name="Union All Output 1"
+              startId="Package\DFT_Roaming_Consolidado\TRF_UnionAll.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\DFT_Roaming_Consolidado"
+          TopLeft="119.166660155687,98.7999993129571" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Roaming_Consolidado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_Roaming_Consolidado\ADO_SRC_HN"
+          TopLeft="38.3333312388924,201.066665268474" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo"
+          TopLeft="885.833284933536,189.799998680155" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\DFT_Roaming_Consolidado\TRF_UnionAll"
+          TopLeft="299.166650320921,115.266665865117" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT_Roaming_Consolidado\ADO_SRC_GT"
+          TopLeft="54.1666637071307,121.333332489596" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\DFT_Roaming_Consolidado\TRF_Multicast"
+          TopLeft="488.333306651977,117.866665847037" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\DFT_Roaming_Consolidado\OLE_DST_Pais"
+          TopLeft="879.999951918922,40.7333330500789" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_Roaming_Consolidado\ADO_SRC_CR"
+          TopLeft="48.3333306925165,23.3999998372793" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT_Roaming_Consolidado\TRF_Agg_Pais"
+          TopLeft="659.999963939191,45.0666663532787" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT_Roaming_Consolidado\TRF_Agg_Tipo"
+          TopLeft="666.666630241607,187.199998698235" />
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET1]"
+          TopLeft="202.966663707131,139.099999177357">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.1999866137904,0"
+              Start="0,0"
+              End="88.6999866137904,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="88.6999866137904,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET]"
+          TopLeft="123.133330692516,64.9999998372793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="247.633319628405,50.2666660278374"
+              Start="0,0"
+              End="247.633319628405,42.7666660278374">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1333330139187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.1333330139187"
+                    Point2="0,25.1333330139187"
+                    Point3="4,25.1333330139187" />
+                  <mssgle:LineSegment
+                    End="243.633319628405,25.1333330139187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="243.633319628405,25.1333330139187"
+                    Point2="247.633319628405,25.1333330139187"
+                    Point3="247.633319628405,29.1333330139187" />
+                  <mssgle:LineSegment
+                    End="247.633319628405,42.7666660278374" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Multicast Output 2]"
+          TopLeft="561.133306651977,159.466665847037">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.93332358963,27.733332851198"
+              Start="0,0"
+              End="179.93332358963,20.233332851198">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.86666642559899" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.86666642559899"
+                    Point2="0,13.866666425599"
+                    Point3="4,13.866666425599" />
+                  <mssgle:LineSegment
+                    End="175.93332358963,13.866666425599" />
+                  <mssgle:CubicBezierSegment
+                    Point1="175.93332358963,13.866666425599"
+                    Point2="179.93332358963,13.866666425599"
+                    Point3="179.93332358963,17.866666425599" />
+                  <mssgle:LineSegment
+                    End="179.93332358963,20.233332851198" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Multicast Output 1]"
+          TopLeft="561.133306651977,117.866665847037">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173.266657287214,-31.1999994937579"
+              Start="0,0"
+              End="173.266657287214,-23.6999994937579">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-11.5999997468789" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-11.5999997468789"
+                    Point2="0,-15.5999997468789"
+                    Point3="4,-15.5999997468789" />
+                  <mssgle:LineSegment
+                    End="169.266657287214,-15.5999997468789" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169.266657287214,-15.5999997468789"
+                    Point2="173.266657287214,-15.5999997468789"
+                    Point3="173.266657287214,-19.5999997468789" />
+                  <mssgle:LineSegment
+                    End="173.266657287214,-23.6999994937579" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Aggregate Output 11]"
+          TopLeft="815.466630241607,209.299998689195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.3666546919284,0"
+              Start="0,0"
+              End="62.8666546919284,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="62.8666546919284,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Aggregate Output 1]"
+          TopLeft="808.799963939191,63.6999997016788">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.199987979731,0"
+              Start="0,0"
+              End="63.699987979731,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.699987979731,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Union All Output 1]"
+          TopLeft="442.366650320921,137.366665856077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.9666563310561,0"
+              Start="0,0"
+              End="38.4666563310561,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.4666563310561,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Roaming_Consolidado.Paths[Salida de origen de ADO NET2]"
+          TopLeft="113.133331238892,201.066665268474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="257.633319082029,-44.1999994033575"
+              Start="0,0"
+              End="257.633319082029,-36.6999994033575">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.0999997016788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.0999997016788"
+                    Point2="0,-22.0999997016788"
+                    Point3="4,-22.0999997016788" />
+                  <mssgle:LineSegment
+                    End="253.633319082029,-22.0999997016788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="253.633319082029,-22.0999997016788"
+                    Point2="257.633319082029,-22.0999997016788"
+                    Point3="257.633319082029,-26.0999997016788" />
+                  <mssgle:LineSegment
+                    End="257.633319082029,-36.6999994033575" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Roaming_Consolidado\ADO_SRC_HN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Roaming_Consolidado\OLE_DST_Tipo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Roaming_Consolidado\ADO_SRC_GT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Roaming_Consolidado\OLE_DST_Pais">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Roaming_Consolidado\ADO_SRC_CR">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
